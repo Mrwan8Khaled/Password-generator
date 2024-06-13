@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Password generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="number" id="num" placeholder="Password character" />
+      <div class="checkBox">
+        <div>
+          <label for="CapCase">Include Capital letters</label>
+          <input type="checkbox" id="CapCase" disabled/>
+        </div>
+        <div>
+          <label for="CapCase">Include Small letters</label>
+          <input type="checkbox" id="SmlCase" disabled/>
+        </div>
+        <div>
+          <label for="CapCase">Include Numbers</label>
+          <input type="checkbox" id="Numbers" disabled/>
+        </div>
+        <div>
+          <label for="CapCase">Include Symbols</label>
+          <input type="checkbox" id="Symbols" disabled/>
+        </div>
+      </div>
+      <button id="create">Generate</button>
+      <p id="pass"></p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
