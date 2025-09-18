@@ -1,68 +1,72 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+      body {
+        font-family: "Sen", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #0d6bb8, #15a3ef);
+        color: #fff;
+      }
 
-body {
-  font-family: 'Sen', sans-serif;
-  background: url('bg.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  backdrop-filter: blur(5px);
-}
+      .container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 2rem;
+        width: 350px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
 
-.container {
-  width: 250px;
-  min-height: 200px;
-  max-height: 1000px;
-  padding: 10px;
-  backdrop-filter: blur(5px);
-  border: #cecece 1px solid;
+      h1 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+      input[type="number"] {
+        width: 100%;
+        padding: 0.7rem;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 10px;
+      .checkBox {
+        text-align: left;
+        margin-bottom: 1rem;
+      }
 
+      .checkBox div {
+        margin: 0.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-  border-radius: 10px;
-  box-shadow: 0px 0px 200px 60px #7575757e;
-}
+      button {
+        width: 100%;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 12px;
+        background: #15a3ef;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
 
-input[type="number"] {
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
-  width: 100%;
-}
+      button:hover {
+        background: #0d6bb8;
+      }
 
-button {
-  width: 100%;
-  background-color: black;
-  color: white;
-  padding: 8px 0;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.checkBox div {
-  display: flex;
-  justify-content: center;
-}
-
-p {
-  display: none;
-}
+      #pass {
+        margin-top: 1rem;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 0.8rem;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        word-break: break-all;
+      }
