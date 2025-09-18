@@ -3,38 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <title>LockForge - Password Generator</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Password generator</title>
+    <style>
+      body {
+        font-family: "Sen", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #0d6bb8, #15a3ef);
+        color: #fff;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 2rem;
+        width: 350px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 0.7rem;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .checkBox {
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+
+      .checkBox div {
+        margin: 0.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      button {
+        width: 100%;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 12px;
+        background: #15a3ef;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      button:hover {
+        background: #0d6bb8;
+      }
+
+      #pass {
+        margin-top: 1rem;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 0.8rem;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        word-break: break-all;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <input type="number" id="num" placeholder="Password character" />
+      <h1>🔐 LockForge</h1>
+      <input type="number" id="num" placeholder="Password length (e.g., 12)" />
       <div class="checkBox">
         <div>
           <label for="CapCase">Include Capital letters</label>
-          <input type="checkbox" id="CapCase" disabled/>
+          <input type="checkbox" id="CapCase" checked />
         </div>
         <div>
-          <label for="CapCase">Include Small letters</label>
-          <input type="checkbox" id="SmlCase" disabled/>
+          <label for="SmlCase">Include Small letters</label>
+          <input type="checkbox" id="SmlCase" checked />
         </div>
         <div>
-          <label for="CapCase">Include Numbers</label>
-          <input type="checkbox" id="Numbers" disabled/>
+          <label for="Numbers">Include Numbers</label>
+          <input type="checkbox" id="Numbers" checked />
         </div>
         <div>
-          <label for="CapCase">Include Symbols</label>
-          <input type="checkbox" id="Symbols" disabled/>
+          <label for="Symbols">Include Symbols</label>
+          <input type="checkbox" id="Symbols" checked />
         </div>
       </div>
       <button id="create">Generate</button>
-      <p id="pass"></p>
+      <p id="pass">Your password will appear here 🔑</p>
     </div>
-
-    <script src="app.js"></script>
   </body>
 </html>
